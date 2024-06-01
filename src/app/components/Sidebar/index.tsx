@@ -1,14 +1,16 @@
+"use client"
+
 import React from "react";
 import styles from "./sidebar.module.css";
-import Menu from "../../images/DashBoard.svg";
+import Menu from "../../images/DashboardColored.svg";
 import Bid from "../../images/bid.svg";
 import Profile from "../../images/Profile.svg";
 import Settings from "../../images/setting.svg";
 import Favorites from "../../images/heart.svg";
 import Link from "next/link";
-import Logo from "@/app/images/Logo.png";
+import Logo from "../../images/Logo.png";
 
-export const Sidebar = () => {
+export const SideBar = () => {
     return (
         <div className={styles.sidebar}>
             <div className={styles.sidebar_Content}>

@@ -38,7 +38,7 @@
   }
   
   .search {
-    background-image: url("../components/Search.svg");
+    background-image: url("../images/Search.svg");
     background-repeat: no-repeat;
     background-position: 10px center;
     padding: 10px;
@@ -152,4 +152,159 @@
 
     }
 }
+}
+
+.settingsOptions {
+  display: flex;
+  gap: 19px;
+
+}
+
+
+.editProfile {
+  
+  .editProfileNames {
+    display: flex;
+    gap: 20px;
+    width: 600px;
+  }
+
+  
+  .editProfileInputArea {
+    width: 600px;
+    margin-top: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  
+  .editProfileInput {
+    border: 1px solid #858585;
+    padding: 8px;
+    background: none;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+  }
+}
+.editProfileText {
+  color: #6C7AA0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.saveChangesButton {
+  display: flex;
+  gap: 20px;
+  width: 600px;
+  padding: 20px 20px 20px 0px;
+}
+
+.cancelChanges {
+  padding: 10px;
+  border: 2px solid #858585;
+  background: none;
+  width: 600px;
+  border-radius: 5px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.save {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  color: #fff;
+  justify-content: center;
+  width: 600px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6C7AA0;
+}
+
+.checkboxInput {
+  margin-top: 10px;
+  display: flex;
+}
+.checkboxArea {
+  display: flex;
+  /* align-items: center; */
+  /* gap: 20px; */
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.checkbox {
+  /* display: none; */
+}
+
+.toggleSwitchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  background-color: #6C7AA0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #232425;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #232425;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

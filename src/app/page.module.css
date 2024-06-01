@@ -222,26 +222,39 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  width: 1000px;
-  gap: 80px;
+  max-width: 1000px;
+  gap: 50px;
   margin-top: 20px;
 
   .OrderContent {
     background-color: #fff;
-    width: 200px;
+    width: 250px;
     height: 250px;
     gap: 8px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
     justify-content: center;
 
+    
+  .loveImg{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+  }
+
     .OrderContentImage {
       border-radius: 10px;
-      height: 100px;
+      max-height: auto;
       width: 100%;
+      display: block;
+      object-fit: cover;
       background-position: 10px center;
     }
 

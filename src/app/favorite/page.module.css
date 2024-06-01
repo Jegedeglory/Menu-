@@ -38,7 +38,7 @@
   }
   
   .search {
-    background-image: url("../components/Search.svg");
+    background-image: url("../images/Search.svg");
     background-repeat: no-repeat;
     background-position: 10px center;
     padding: 10px;
@@ -75,7 +75,7 @@
       font-weight: 500;
     }
 
-    .profile_Content {
+    .profile_content {
       display: flex;
       gap: 10px;
       color: #6C7AA0;
@@ -87,44 +87,64 @@
     }
   }
   
+  
 
-.PlaceOrder {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    width: 1000px;
-    gap: 80px;
-    margin-top: 20px;
-    .OrderContent{
-      background-color: #fff;
-      width: 200px;
-      height: 250px;
-      gap: 8px;
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-      margin: 5px;
+
+
+
+.placeOrder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 1000px;
+  gap: 50px;
+  margin-top: 20px;
+
+
+  .orderContent {
+    background-color: #fff;
+    width: 250px;
+    /* height: 250px; */
+    gap: 8px;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    justify-content: center;
+      
+  .loveImg{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    height: 30px;
+    width: 30px;
+    /* margin-top: 10px; */
+  }
+
+    .orderContentImage {
       border-radius: 10px;
-      justify-content: center;
-      /* align-items: center; */
-      .OrderContentImage {
-        background-image: url("../../../public/Discover.png");
-        border-radius: 10px;
-        height: 100px;
-        background-position: 10px center;
-      }
+      max-height: auto;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      background-position: 10px center;
+      
+    }
+
       .sellersName {
         font-size: 14px;
         font-weight: 600;
       }
-      .TimeDelivered {
+      .timeDelivered {
         font-size: 14px;
       }
-      .Delivery_timeFigure {
+      .delivery_timeFigure {
         font-weight: 300;
         font-size: 14px;
       }
-      .OrderNowButton {
+      .orderNowButton {
         padding: 10px;
         color: #fff;
         background-color: #6F4FF2;

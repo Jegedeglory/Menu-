@@ -1,137 +1,121 @@
+"use client"
+import React, { useState, useEffect } from 'react';
+import styles from './page.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import Logo from '../images/Logo.png';
+import Menu from '../images/DashboardColored.svg';
+import Bid from '../images/bid.svg';
+import Profile from '../images/Profile.svg';
+import Settings from '../images/setting.svg';
+import Favorites from '../images/heart.svg';
+import Moon from '../images/moon.svg';
+import Notification from '../images/bell.svg';
+import Avatar from '../images/avatar.png';
+import Love from '../images/ant-design_heart-filled.svg';
+import { SideBar } from '../components/Sidebar';
+import { TopBar } from '../components/Topbar';
 
-import React from "react";
-import styles from "./page.module.css";
-import Logo from "../../../public/Logo.png";
-import Menu from "../components/DashboardColored.svg";
-import Bid from "../components/bid.svg";
-import Profile from "../components/Profile.svg";
-import Settings from "../components/setting.svg";
-import Favorites from "../components/heartColored.svg";
-import Moon from "../components/moon.svg";
-import  Notification from "../components/bell.svg";
-import Avatar from "../../../public/avatar.png"
-import Link from "next/link";
-
-
+interface Chef {
+  id: number;
+  name: string;
+  deliveryTime: string;
+  image: string;
+  description: string;
+}
 
 const Favorite: React.FC = () => {
+  const [favoriteChefs, setFavoriteChefs] = useState<Chef[]>([]);
+
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('favoriteChefs');
+    if (savedFavorites) {
+      setFavoriteChefs(JSON.parse(savedFavorites) as Chef[]);
+    }
+  }, []);
+
   return (
     <main className={styles.main}>
-      <div className={styles.sidebar}>
-        <div className={styles.sidebar_Content}>
-          <span className={styles.Logo}>
-            <div>
-            <img src={ Logo.src } alt="Logo" />
-            </div>
-            </span>
-            <Link href="/">
-          <div>
-            <img src={ Menu.src } alt="Logo" />
-            </div>
-            </Link>
-          <div>
-            <img src={ Bid.src } alt="Logo" />
-            </div>
-          <Link href="/profile">
-          <div>
-            <img src={ Profile.src } alt="Logo" />
-            </div>
-          </Link>
-          <Link href="/favorite">
-          <div>
-            <img src={ Favorites.src } alt="Logo" />
-            </div>
-            </Link>
-            <Link href="/settings">
-          <div>
-            <img src={ Settings.src } alt="Logo" />
-            </div>
-            </Link>
-            </div>
-            </div>
+      <SideBar />
       <div className={styles.main_content}>
-        <div className={styles.topBar}><input type="text" placeholder="Search here" className={styles.search} />
-        <div className={styles.AvatarMenu}> 
-        <img src={Moon.src} alt="toggle Theme" />
-        <img src={ Notification.src } alt="Notification" />
-        <img src={Avatar.src} alt="Profile Image" />
-        </div>
-        </div>
-
-        <section className={styles.Section_Content}>
-        <div className={styles.Topic_options}>
+        <TopBar />
+        <section className={styles.section_content}>
+          <div className={styles.Topic_options}>
             <p className={styles.profileDisplay}>Favorites</p>
-            <div className={styles.profile_Content}>
-            <span className={styles.profileOptions}>Home</span>
-            <span className={styles.profileOptions}>Favorites</span>
+            <div className={styles.profile_content}>
+              <div className={styles.profileOptions}>Home</div>
+              <div className={styles.profileOptions}>Favorites</div>
             </div>
           </div>
-          <div className={styles.PlaceOrder}>
-            <span className={styles.OrderContent}>
-              <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
-            <span className={styles.OrderContent}>
-            <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
-            <span className={styles.OrderContent}>
-            <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
-            <span className={styles.OrderContent}>
-            <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
-            <span className={styles.OrderContent}>
-            <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
-            <span className={styles.OrderContent}>
-            <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
-            <span className={styles.OrderContent}>
-            <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
-            <span className={styles.OrderContent}>
-            <div className={styles.OrderContentImage}></div>
-              <p className={styles.sellersName}>Chops' Merchant</p>
-              <p className={styles.TimeDelivered}>Average Delivery Time</p>
-                  <p className={styles.Delivery_timeFigure}>3h 3m 43s</p>
-                  <button className={styles.OrderNowButton}>Place Order</button>
-            </span>
+          <div className={styles.placeOrder}>
+            {favoriteChefs.map((chef) => (
+              <div className={styles.orderContent} key={chef.id}>
+                <img src={Love.src} alt="" className={styles.loveImg} />
+                <Image
+                  src={chef.image}
+                  alt="Image"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                  className={styles.orderContentImage}
+                />
+                <p className={styles.sellersName}>{chef.name}</p>
+                <p className={styles.timeDelivered}>Average Delivery Time</p>
+                <p className={styles.deliveryTimeFigure}>{chef.deliveryTime}</p>
+                <button className={styles.orderNowButton}>Place Order</button>
+              </div>
+            ))}
           </div>
-
-
         </section>
-
       </div>
     </main>
   );
-}
+};
 
+const Sidebar: React.FC = () => (
+  <div className={styles.sidebar}>
+    <div className={styles.sidebarContent}>
+      <span className={styles.logo}>
+        <Link href="/">
+        <Image src={Logo} alt="Logo" />
+        </Link>
+      </span>
+      <Link href="/">
+        <div>
+          <Image src={Menu} alt="Menu" />
+        </div>
+      </Link>
+      <div>
+        <Image src={Bid} alt="Bid" />
+      </div>
+      <Link href="/profile">
+        <div>
+          <Image src={Profile} alt="Profile" />
+        </div>
+      </Link>
+      <Link href="/favorite">
+        <div>
+          <Image src={Favorites} alt="Favorites" />
+        </div>
+      </Link>
+      <Link href="/settings">
+        <div>
+          <Image src={Settings} alt="Settings" />
+        </div>
+      </Link>
+    </div>
+  </div>
+);
+
+// const TopBar: React.FC = () => (
+//   <div className={styles.topBar}>
+//     <input type="text" placeholder="Search here" className={styles.search} />
+//     <div className={styles.avatarMenu}>
+//       <Image src={Moon} alt="Toggle Theme" />
+//       <Image src={Notification} alt="Notification" />
+//       <Image src={Avatar} alt="Profile Image" />
+//     </div>
+//   </div>
+// );
 
 export default Favorite;

@@ -1,15 +1,15 @@
 
 import React from "react";
 import styles from "./page.module.css";
-import Logo from "../../../public/Logo.png";
-import Menu from "../components/DashboardColored.svg";
-import Bid from "../components/bid.svg";
-import Profile from "../components/ProfileColored.svg";
-import Settings from "../components/setting.svg";
-import Favorites from "../components/heart.svg";
-import Moon from "../components/moon.svg";
-import  Notification from "../components/bell.svg";
-import Avatar from "../../../public/avatar.png"
+import Logo from "../images/Logo.png";
+import Menu from "../images/DashboardColored.svg";
+import Bid from "../images/bid.svg";
+import Profile from "../images/ProfileColored.svg";
+import Settings from "../images/setting.svg";
+import Favorites from "../images/heart.svg";
+import Moon from "../images/moon.svg";
+import  Notification from "../images/bell.svg";
+import Avatar from "../images/avatar.png"
 import Link from "next/link";
 
 
