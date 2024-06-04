@@ -28,42 +28,52 @@
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 
 .Explore {
   background-image: url("../../images/Discover.png");
-  width: 400px;
+  width: 100%;
+  height: 200px;
   flex: 1;
   color: #fff;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   background-position: 10px center;
-  gap: 10px;
+  gap: 20px;
 
   .introText {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
+    white-space: normal;
+    word-break: normal;
+    width: 300px;
   }
 
   .Preamble {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 200;
   }
 
   .ExplorButtons {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    width: 50%;
 
     .ExploreButton1 {
       padding: 10px;
-      margin-right: 5px;
+      /* margin-right: 5px; */
       color: #fff;
       background-color: #6F4FF2;
       border: none;
@@ -73,7 +83,7 @@
 
     .ExploreButton2 {
       padding: 10px;
-      margin-left: 5px;
+      /* margin-left: 5px; */
       color: #fff;
       background-color: #DC3546;
       border: none;
@@ -87,29 +97,36 @@
   color: #000;
   display: flex;
   background-color: #fff;
-  margin-left: auto;
+  /* margin-left: auto; */
   padding: 20px;
   gap: 10px;
   flex: 1;
+  height: 200px;
+  border-radius: 10px;
 
   .bid_Image {
     background-image: url("../../images/NFT.png");
-    width: 250px;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    padding: 50px;
-    height: 150px;
-    align-items: center;
-    justify-content: center;
+    height: 160px;
     background-position: 10px center;
-    /* margin-top: 20px; */
+    background-size: cover;
+  }
+  .bid_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .bid_postContent {
     display: flex;
     align-items: center;
     padding-left: 10px;
+    gap: 10px;
+    padding-top: 10px;
     font-size: 14px;
     font-weight: 500;
   }
@@ -133,8 +150,9 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin: 4px 0;
+    /* margin-top: 4px; */
+    /* margin-bottom: 4px; */
   }
 
   .bidder_timeFigure {
@@ -146,22 +164,28 @@
   .orderButton {
     padding: 10px;
     margin-right: 5px;
-    margin-left: 10px;
+    padding-left: 10px;
     color: #fff;
     background-color: #6F4FF2;
     border: none;
     border-radius: 5px;
-    width: 100px;
+    width: 100%;
   }
 
   .History {
     padding: 10px;
-    margin-left: 5px;
+    /* margin-left: 5px; */
     color: #fff;
     background-color: #DC3546;
     border: none;
     border-radius: 5px;
-    width: 100px;
+    width: 100%;
   }
 
+}
+
+.orderContentButton {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
 }

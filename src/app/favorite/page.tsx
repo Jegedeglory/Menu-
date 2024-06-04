@@ -39,8 +39,9 @@ const Favorite: React.FC = () => {
       <SideBar />
       <div className={styles.main_content}>
         <TopBar />
+
         <section className={styles.section_content}>
-          <div className={styles.Topic_options}>
+          <div className={styles.topic_options}>
             <p className={styles.profileDisplay}>Favorites</p>
             <div className={styles.profile_content}>
               <div className={styles.profileOptions}>Home</div>
@@ -72,50 +73,41 @@ const Favorite: React.FC = () => {
   );
 };
 
-const Sidebar: React.FC = () => (
-  <div className={styles.sidebar}>
-    <div className={styles.sidebarContent}>
-      <span className={styles.logo}>
-        <Link href="/">
-        <Image src={Logo} alt="Logo" />
-        </Link>
-      </span>
-      <Link href="/">
-        <div>
-          <Image src={Menu} alt="Menu" />
-        </div>
-      </Link>
-      <div>
-        <Image src={Bid} alt="Bid" />
-      </div>
-      <Link href="/profile">
-        <div>
-          <Image src={Profile} alt="Profile" />
-        </div>
-      </Link>
-      <Link href="/favorite">
-        <div>
-          <Image src={Favorites} alt="Favorites" />
-        </div>
-      </Link>
-      <Link href="/settings">
-        <div>
-          <Image src={Settings} alt="Settings" />
-        </div>
-      </Link>
-    </div>
-  </div>
-);
-
-// const TopBar: React.FC = () => (
-//   <div className={styles.topBar}>
-//     <input type="text" placeholder="Search here" className={styles.search} />
-//     <div className={styles.avatarMenu}>
-//       <Image src={Moon} alt="Toggle Theme" />
-//       <Image src={Notification} alt="Notification" />
-//       <Image src={Avatar} alt="Profile Image" />
+// const Sidebar: React.FC = () => (
+//   <div className={styles.sidebar}>
+//     <div className={styles.sidebarContent}>
+//       <span className={styles.logo}>
+//         <Link href="/">
+//         <Image src={Logo} alt="Logo" />
+//         </Link>
+//       </span>
+//       <Link href="/">
+//         <div>
+//           <Image src={Menu} alt="Menu" />
+//         </div>
+//       </Link>
+//       <div>
+//         <Image src={Bid} alt="Bid" />
+//       </div>
+//       <Link href="/profile">
+//         <div>
+//           <Image src={Profile} alt="Profile" />
+//         </div>
+//       </Link>
+//       <Link href="/favorite">
+//         <div>
+//           <Image src={Favorites} alt="Favorites" />
+//         </div>
+//       </Link>
+//       <Link href="/settings">
+//         <div>
+//           <Image src={Settings} alt="Settings" />
+//         </div>
+//       </Link>
 //     </div>
 //   </div>
 // );
+
+
 
 export default Favorite;

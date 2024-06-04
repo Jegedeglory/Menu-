@@ -5,6 +5,7 @@
     background-color: #fff;
     box-sizing: border-box;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
 }
 
 

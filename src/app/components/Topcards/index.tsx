@@ -24,7 +24,7 @@ export const TopCards = () => {
                         <p className={styles.bidder_time}>Average delivery time</p>
                         <p className={styles.bidder_timeFigure}>3h 3m 43s</p>
                     </div>
-                    <div><button className={styles.orderButton}>Patronize</button> <button className={styles.History}>History</button></div>
+                    <div className={styles.orderContentButton}><button className={styles.orderButton}>Patronize</button> <button className={styles.History}>History</button></div>
                 </div>
             </div>
         </div>

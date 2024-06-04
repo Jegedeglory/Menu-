@@ -53,7 +53,7 @@ const Home: React.FC = () => {
     <main className={styles.main}>
       <SideBar />
       <div className={styles.main_content}>
-        <TopBar />
+        <TopBar /> 
         <section className={styles.Section_Content}>
           <TopCards />
           <div className={styles.Topic_options}>

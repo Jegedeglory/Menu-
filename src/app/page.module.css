@@ -1,7 +1,7 @@
 .main {
   display: flex;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 
@@ -9,6 +9,7 @@
   flex: 30;
   padding: 20px;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .Logo {
@@ -46,7 +47,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .options {
@@ -60,14 +61,14 @@
 .Explore {
   background-image: url("../../public/Discover.png");
   width: 400px;
-  /* height: 100px; */
+  /* height: 1000px; */
   color: #fff;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   padding: 30px;
   background-position: 10px center;
-  margin-top: 20px;
+  margin-top: 10px;
   gap: 10px;
 
   .introText {
@@ -191,8 +192,9 @@
 .Topic_options {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 10px;
+  align-items: center;
+  margin: 10px 10px 0 10px;
+  padding: 10px 20px;
 
   .trendingNow {
     font-weight: 500;
@@ -214,62 +216,71 @@
     .OtherOptions {
       padding: 4px;
       border-radius: 8px;
+      padding: 4px 10px;
+      text-align: center;
+      white-space: nowrap;
     }
   }
 }
 
 .PlaceOrder {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  max-width: 1000px;
-  gap: 50px;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* max-width: 1000px; */
+  gap: 20px;
   margin-top: 20px;
+  padding: 0 20px;
 
   .OrderContent {
     background-color: #fff;
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     gap: 8px;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
     justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     
   .loveImg{
     display: flex;
-    align-items: center;
-    justify-content: left;
-    flex-direction: column;
     height: 30px;
     width: 30px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-right: auto;
   }
 
     .OrderContentImage {
       border-radius: 10px;
       max-height: auto;
       width: 100%;
-      display: block;
       object-fit: cover;
       background-position: 10px center;
+      margin-bottom: 10px;
     }
 
     .sellersName {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
+      margin-bottom: 10px;
     }
 
     .TimeDelivered {
-      font-size: 14px;
+      font-size: 16px;
+      margin-bottom: 5px;
     }
 
     .Delivery_timeFigure {
       font-weight: 300;
-      font-size: 14px;
+      font-size: 16px;
+      margin-bottom: 5px;
     }
 
     .OrderNowButton {
@@ -278,7 +289,10 @@
       background-color: #6F4FF2;
       border: none;
       border-radius: 5px;
-      width: 100px;
+      width: 100%;
+      margin-top: 10px;
+      cursor: pointer;
+
     }
   }
 }
