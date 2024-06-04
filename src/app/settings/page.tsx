@@ -19,8 +19,8 @@ const SettingsPage: React.FC = () => {
   const handleOptionClick = (option: string) => {
     setActiveOption(option);
   };
-  const handleOptionClick1 = (option: string) => {
-    setActiveOption1(option);
+  const handleOptionClick1 = (options: string) => {
+    setActiveOption1(options);
   };
 
   return (
