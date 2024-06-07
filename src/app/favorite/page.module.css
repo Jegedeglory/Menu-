@@ -1,7 +1,7 @@
 .main {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
   }
   
   .sidebar {
@@ -33,6 +33,11 @@
     margin-bottom: 20px;
   }
   
+  .topbarMainContent {
+    display: flex;
+    width: 100%;
+  }
+
   .topBar {
     justify-content: space-between;
     display: flex;
@@ -65,10 +70,9 @@
     margin-top: 10px;
     justify-content: center;
     flex-direction: column;
+    margin-left: 10px;
   }
   
-  
-
   
     .profileDisplay {
       font-weight: 500;
@@ -90,8 +94,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 10px 0 10px;
-    padding: 10px 20px;
   
     .trendingNow {
       font-weight: 500;
@@ -119,7 +121,7 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 20px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 
 
   .orderContent {
@@ -130,7 +132,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin: 5px;
+    /* margin: 5px; */
     border-radius: 10px;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

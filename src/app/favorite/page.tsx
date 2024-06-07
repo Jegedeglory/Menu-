@@ -36,10 +36,10 @@ const Favorite: React.FC = () => {
 
   return (
     <main className={styles.main}>
+      <div className={styles.topbarMainContent}>
       <SideBar />
       <div className={styles.main_content}>
         <TopBar />
-
         <section className={styles.section_content}>
           <div className={styles.topic_options}>
             <p className={styles.profileDisplay}>Favorites</p>
@@ -68,6 +68,7 @@ const Favorite: React.FC = () => {
             ))}
           </div>
         </section>
+      </div>
       </div>
     </main>
   );

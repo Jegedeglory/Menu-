@@ -51,6 +51,7 @@ const Home: React.FC = () => {
   };
   return (
     <main className={styles.main}>
+      <div className={styles.topbarMainContent}>
       <SideBar />
       <div className={styles.main_content}>
         <TopBar /> 
@@ -90,6 +91,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </section>
+          </div>
       </div>
     </main>
   );
