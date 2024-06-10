@@ -225,9 +225,29 @@ const SettingsPage: React.FC = () => {
             )}
             {activeOption === "Security" && (
               <div className={styles.securitySection}>
+                <div className={styles.pfpSection}>
                 <div className={styles.changePfp}>
                   <img src={PfP.src} alt="Pfp" className={styles.PfP} />
+                  <div className={styles.EditImageBox}></div>
                 </div>
+              </div>
+              <div className={styles.editDetails}>
+                <div className={styles.editSecurityDetails}><p>Sign-in Email</p> <p>Jegsboy007@gmail.com</p></div>
+                <div className={styles.editSecurityDetails}><p>Password</p> <p className={styles.changePassword}>Change Password</p></div>
+                <div className={styles.editSecurityDetails}><p>2-factor authentication</p>
+                <div>
+                <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.slider}></span>
+                  </label>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.sliderRound}></span>
+                  </label>
+                </div>
+                 </div>
+                <div className={styles.editSecurityDetails}><p>Phone Number</p> <p>+2348053436707</p></div>
+              </div>
               </div>
             )}
           </section>

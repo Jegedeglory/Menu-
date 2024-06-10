@@ -14,11 +14,13 @@ export const SideBar = () => {
     return (
         <div className={styles.sidebar}>
             <div className={styles.sidebar_Content}>
+                    <Link href="/">
                 <span className={styles.Logo}>
                     <div>
                         <img src={Logo.src} alt="Logo" />
                     </div>
                 </span>
+                    </Link>
                 <Link href="/">
                     <div>
                         <img src={Menu.src} alt="Logo" />
