@@ -1,7 +1,7 @@
 .main {
     display: flex;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
   }
   
   .sidebar {
@@ -11,12 +11,14 @@
     background-color: #fff;
     box-sizing: border-box;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
   }
   
   
   .main_content {
     flex: 30;
     padding: 20px;
+    overflow-y: auto;
     box-sizing: border-box;
   }
   
@@ -29,6 +31,11 @@
   
   .Logo {
     margin-bottom: 20px;
+  }
+
+  .topbarMainContent {
+    display: flex;
+    width: 100%;
   }
   
   .topBar {
@@ -60,16 +67,17 @@
   
   .Section_Content {
     display: flex;
+    margin-top: 10px;
     justify-content: center;
     flex-direction: column;
+    margin-left: 10px;
   }
   
   
   .Topic_options {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    margin-left: 10px;
+    align-items: center;
   
     .profileDisplay {
       font-weight: 500;
@@ -88,12 +96,17 @@
   }
   
   .AllProfile {
+    flex: 1;
+    width: 100%;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
 
   .profile_section{
+    flex: 1;
     display: grid;
     gap: 4px;
+    /* max-height: 250px; */
     width: 300px;
     padding: 10px;
     background-color: #fff;
@@ -110,46 +123,130 @@
   }
 
   .editButton {
-    margin: 30px;
+    margin-top: 30px;
     border: none;
     background-color: #6C7AA0;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
     color: #fff;
     font-weight: 400;
   }
 }
 
+.followingWord {
+  font-weight: 500;
+  font-size: 16px;
+}
+
 .followers_section {
     display: flex;
+    flex: 1;
     flex-direction: column;
     background-color: #fff;
     padding: 10px;
-    height: 100px;
+    /* width: 100%; */
     border-radius: 5px;
     gap: 10px;
-    margin-right: 100px;
+    margin-right: 10px;
     
     .followers {
         margin-bottom: 10px;
         display: flex;
-        gap: 10px;
-        justify-content: space-between;
+        gap: 30px;
     }
     .followers_description{
         gap: 5px;
         display: flex;
+        width: 100%;
+        justify-content: center;
         flex-direction: column;
-        text-align: start;
     }
     .unfollowButton {
         border: none;
         background-color: #DC3546;
-        padding: 10px;
+        /* padding: 10px; */
         border-radius: 5px;
         color: #fff;
+        text-align: center;
         font-weight: 400;
+        width: 100%;
 
     }
 }
+}
+
+.HistoryOrder {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.PlaceOrder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  /* width: 100%; */
+
+  .OrderContent {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    
+  .loveImg{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+    .OrderContentImage {
+      border-radius: 10px;
+      max-height: auto;
+      width: 100%;
+      object-fit: cover;
+      background-position: 10px center;
+      margin-bottom: 10px;
+    }
+
+    .sellersName {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .TimeDelivered {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .Delivery_timeFigure {
+      font-weight: 300;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .OrderNowButton {
+      padding: 10px;
+      color: #fff;
+      background-color: #6F4FF2;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      margin-top: 10px;
+      cursor: pointer;
+
+    }
+  }
 }

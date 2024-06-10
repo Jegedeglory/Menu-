@@ -11,16 +11,14 @@ import Moon from "../images/moon.svg";
 import Notification from "../images/bell.svg";
 import Avatar from "../images/avatar.png";
 import Link from "next/link";
+import PfP from "../images/pfp.svg.png"
+
+type Option = "Edit Profile" | "Notification" | "Security" | "Help" | null;
 
 const SettingsPage: React.FC = () => {
-  const [activeOption, setActiveOption] = useState<string | null>(null);
-  const [activeOption1, setActiveOption1] = useState<string | null>(null);
-
-  const handleOptionClick = (option: string) => {
+  const [activeOption, setActiveOption] = useState<Option>("Edit Profile" || "Notification" || "Security" || "Help");
+  const handleOptionClick = (option: Option) => {
     setActiveOption(option);
-  };
-  const handleOptionClick1 = (option: string) => {
-    setActiveOption1(option);
   };
 
   return (
@@ -75,16 +73,18 @@ const SettingsPage: React.FC = () => {
                 <span className={styles.profileOptions}>Setting</span>
               </div>
             </div>
-            <div className={styles.settingsOptions}>
-              <p
+            <div 
+            className={styles.settingsOptions}
+            >
+             <p
                 className={`${styles.editProfileText} ${activeOption === "Edit Profile" ? styles.active : ""}`}
                 onClick={() => handleOptionClick("Edit Profile")}
               >
                 Edit Profile
               </p>
               <p
-                className={`${styles.editProfileText} ${activeOption1 === "Notification" ? styles.active : ""}`}
-                onClick={() => handleOptionClick1("Notification")}
+                className={`${styles.editProfileText} ${activeOption === "Notification" ? styles.active : ""}`}
+                onClick={() => handleOptionClick("Notification")}
               >
                 Notification
               </p>
@@ -131,8 +131,8 @@ const SettingsPage: React.FC = () => {
                 </div>
               </div>
             )}
-            {activeOption1 === "Notification" && (
-              <div className={styles.editProfile}>
+              {activeOption === "Notification" && (
+              <div className={`${styles.editProfile} ${styles.checkInput}`}>
                 <div className={styles.checkboxInput}>
                   <label className={styles.switch}>
                     <input type="checkbox" />
@@ -143,9 +143,90 @@ const SettingsPage: React.FC = () => {
                     <span className={styles.sliderRound}></span>
                   </label>
                   <div className={styles.checkboxArea}>
-                    <p>Delivery completed</p>
+                    <p className={styles.notificationBlockWord}>Delivery completed</p>
                     <p>Alert me when my delivery is complete</p>
                   </div>
+                </div>
+                <div className={styles.checkboxInput}>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.slider}></span>
+                  </label>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.sliderRound}></span>
+                  </label>
+                  <div className={styles.checkboxArea}>
+                    <p className={styles.notificationBlockWord}>New Order</p>
+                    <p>Alert me when my delivery is complete</p>
+                  </div>
+                </div>
+                <div className={styles.checkboxInput}>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.slider}></span>
+                  </label>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.sliderRound}></span>
+                  </label>
+                  <div className={styles.checkboxArea}>
+                    <p className={styles.notificationBlockWord}>Delivery completed</p>
+                    <p>Alert me when my delivery is complete</p>
+                  </div>
+                </div>
+                <div className={styles.checkboxInput}>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.slider}></span>
+                  </label>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.sliderRound}></span>
+                  </label>
+                  <div className={styles.checkboxArea}>
+                    <p className={styles.notificationBlockWord}>Delivery completed</p>
+                    <p>Alert me when my delivery is complete</p>
+                  </div>
+                </div>
+                <div className={styles.checkboxInput}>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.slider}></span>
+                  </label>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.sliderRound}></span>
+                  </label>
+                  <div className={styles.checkboxArea}>
+                    <p className={styles.notificationBlockWord}>Delivery completed</p>
+                    <p>Alert me when my delivery is complete</p>
+                  </div>
+                </div>
+                <div className={styles.checkboxInput}>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.slider}></span>
+                  </label>
+                  <label className={styles.switch}>
+                    <input type="checkbox" />
+                    <span className={styles.sliderRound}></span>
+                  </label>
+                  <div className={styles.checkboxArea}>
+                    <p className={styles.notificationBlockWord}>Delivery completed</p>
+                    <p>Alert me when my delivery is complete</p>
+                  </div>
+                </div>
+                     <div className={styles.saveChangesButton}>
+                     <button className={styles.cancelChanges}>Cancel</button>
+                     <button className={styles.save}>Save</button>
+                   </div>
+              </div>
+            )}
+            {activeOption === "Security" && (
+              <div className={styles.securitySection}>
+                <div className={styles.changePfp}>
+                  <img src={PfP.src} alt="Pfp" className={styles.PfP} />
                 </div>
               </div>
             )}
