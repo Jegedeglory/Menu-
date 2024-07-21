@@ -1,3 +1,43 @@
+/* Light theme */
+.lightTheme {
+  --background-color: #fff;
+  --text-color: #000;
+  --input-bg-color: #f0f0f0;
+  --input-text-color: #000;
+  --button-bg-color: #6C7AA0;
+  --button-text-color: #fff;
+}
+
+/* Dark theme */
+.darkTheme {
+  --background-color: #232425;
+  --text-color: #fff;
+  --input-bg-color: #333;
+  --input-text-color: #fff;
+  --button-bg-color: #fff;
+  --button-text-color: #232425;
+}
+
+body.lightTheme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.darkTheme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.search {
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+}
+
+.editButton, .unfollowButton, .save, .cancelChanges {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
 .topBar {
   justify-content: space-between;
   display: flex;
@@ -5,10 +45,21 @@
   box-sizing: border-box;
 }
 
+.topBarWithLogo {
+  display: none;
+}
+
 .AvatarMenu {
   gap: 20px;
   display: flex;
   align-items: center;
+}
+
+.profilePicture {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  outline: 1px solid #68676E;
 }
 
 .search {
@@ -24,4 +75,28 @@
   height: 40px;
   color: #68676E;
   margin-left: 10px;
+}
+
+.LogoOutside {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+.LogoOutside {
+  display: block;
+}
+.topBar {
+  display: none;
+}
+.topBarWithLogo {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.searchWithLogo {
+  display: inline-flex;
+  align-items: center;
+}
 }

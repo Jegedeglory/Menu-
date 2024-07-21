@@ -3,15 +3,6 @@ import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../images/Logo.png';
-import Menu from '../images/DashboardColored.svg';
-import Bid from '../images/bid.svg';
-import Profile from '../images/Profile.svg';
-import Settings from '../images/setting.svg';
-import Favorites from '../images/heart.svg';
-import Moon from '../images/moon.svg';
-import Notification from '../images/bell.svg';
-import Avatar from '../images/avatar.png';
 import Love from '../images/ant-design_heart-filled.svg';
 import { SideBar } from '../components/Sidebar';
 import { TopBar } from '../components/Topbar';
@@ -44,7 +35,9 @@ const Favorite: React.FC = () => {
           <div className={styles.topic_options}>
             <p className={styles.profileDisplay}>Favorites</p>
             <div className={styles.profile_content}>
+              <Link href="/">
               <div className={styles.profileOptions}>Home</div>
+              </Link>
               <div className={styles.profileOptions}>Favorites</div>
             </div>
           </div>
@@ -55,9 +48,9 @@ const Favorite: React.FC = () => {
                 <Image
                   src={chef.image}
                   alt="Image"
-                  width={100}
-                  height={100}
-                  objectFit="cover"
+                  width="243"
+                  height="187"
+                  // objectFit="cover"
                   className={styles.orderContentImage}
                 />
                 <p className={styles.sellersName}>{chef.name}</p>
@@ -73,41 +66,6 @@ const Favorite: React.FC = () => {
     </main>
   );
 };
-
-// const Sidebar: React.FC = () => (
-//   <div className={styles.sidebar}>
-//     <div className={styles.sidebarContent}>
-//       <span className={styles.logo}>
-//         <Link href="/">
-//         <Image src={Logo} alt="Logo" />
-//         </Link>
-//       </span>
-//       <Link href="/">
-//         <div>
-//           <Image src={Menu} alt="Menu" />
-//         </div>
-//       </Link>
-//       <div>
-//         <Image src={Bid} alt="Bid" />
-//       </div>
-//       <Link href="/profile">
-//         <div>
-//           <Image src={Profile} alt="Profile" />
-//         </div>
-//       </Link>
-//       <Link href="/favorite">
-//         <div>
-//           <Image src={Favorites} alt="Favorites" />
-//         </div>
-//       </Link>
-//       <Link href="/settings">
-//         <div>
-//           <Image src={Settings} alt="Settings" />
-//         </div>
-//       </Link>
-//     </div>
-//   </div>
-// );
 
 
 
