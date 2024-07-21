@@ -32,7 +32,6 @@ export const TopBar = () => {
   
     return (
         <>
-   
         <div className={styles.topBar}>
             <input type="text" placeholder="Search here" className={styles.search} />
             <div className={styles.AvatarMenu}>
@@ -41,7 +40,6 @@ export const TopBar = () => {
                 <img src={profilePic} alt="Profile Image" className={styles.profilePicture} />
             </div>
         </div>
-
         <div className={styles.topBarWithLogo}>
             <span className={styles.searchWithLogo}>
 
@@ -57,7 +55,7 @@ export const TopBar = () => {
             <div className={styles.AvatarMenu}>
                 <img src={Moon.src} alt="toggle Theme" />
                 <img src={Notification.src} alt="Notification" />
-                <img src={Avatar.src} alt="Profile Image" />
+                <img src={profilePic} alt="Profile Image" className={styles.profilePicture} />
             </div>
         </div>
 

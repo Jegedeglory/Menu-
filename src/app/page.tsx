@@ -18,16 +18,16 @@ interface Chef {
 }
 const Home: React.FC = () => {
   const [favorites, setFavorites] = useState<Chef[]>([]);
-  const [filter, setFilter] = useState<string>("all");
+  const [filter, setFilter] = useState<string>("all" || "drinks" || "food");
   const chefs = [
-    { id: 1, name: 'James Grey', deliveryTime: '25 min', image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 1 description', productType: "drinks" },
-    { id: 2, name: 'John Rene', deliveryTime: '35 min', image: 'https://images.pexels.com/photos/220413/pexels-photo-220413.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 2 description', productType: "food" },
-    { id: 3, name: 'Monica Dias', deliveryTime: '45 min', image: 'https://images.pexels.com/photos/220433/pexels-photo-220433.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 3 description', productType: "food" },
-    { id: 4, name: 'Suarez Alberto', deliveryTime: '45 min', image: 'https://images.pexels.com/photos/220493/pexels-photo-220493.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 3 description', productType: "drinks" },
-    { id: 5, name: 'Chloe Mary', deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/220743/pexels-photo-220743.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 5 description', productType: "drinks" },
-    { id: 6, name: 'Clinton Bob', deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/220253/pexels-photo-220253.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 5 description', productType: "drinks" },
-    { id: 7, name: 'Steve McCarthy', deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/245753/pexels-photo-245753.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 5 description', productType: "drinks" },
-    { id: 8, name: 'Amosun Nelson', deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/220754/pexels-photo-220754.jpeg?auto=compress&cs=tinysrgb&w=2260&h=750&dpr=1', description: 'Chef 5 description', productType: "food" },
+    { id: 1, name: 'James Grey Winery', deliveryTime: '25 min', image: 'https://images.pexels.com/photos/33265/wine-bottle-wine-glasses-wine-ambience.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', description: 'Chef 1 description', productType: "drinks" },
+    { id: 2, name: 'Fruit Juice Palace', deliveryTime: '35 min', image: 'https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg', description: 'Chef 2 description', productType: "drinks" },
+    { id: 3, name: 'Belle full', deliveryTime: '45 min', image: 'https://images.pexels.com/photos/2347311/pexels-photo-2347311.jpeg?auto=compress&cs=tinysrgb&w=600', description: 'Chef 3 description', productType: "food" },
+    { id: 4, name: 'Sugar fams', deliveryTime: '45 min', image: 'https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', description: 'Chef 4 description', productType: "food" },
+    { id: 5, name: 'The Mainz Cookies', deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/4110541/pexels-photo-4110541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', description: 'Chef 5 description', productType: "food" },
+    { id: 6, name: "Bob's Smoothie", deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/756773/pexels-photo-756773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', description: 'Chef 6 description', productType: "drinks" },
+    { id: 7, name: 'Fruits Colslaw', deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/709567/pexels-photo-709567.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', description: 'Chef 7 description', productType: "food" },
+    { id: 8, name: 'Milky Doughnuts', deliveryTime: '1hr 32min', image: 'https://images.pexels.com/photos/3338681/pexels-photo-3338681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', description: 'Chef 8 description', productType: "food" },
   ];
 
   useEffect(() => {
@@ -65,13 +65,13 @@ const Home: React.FC = () => {
           <div className={styles.topicOptions}>
             <p className={styles.trendingNow}>Trending Now</p>
             <div className={styles.trendingContent}>
-            <button className={`${styles.allOptions} ${filter === "all" ? styles.active : ""}`} onClick={() => handleFilterChange("all")}>
+            <button className={`${filter === "all" ? styles.allOptions : styles.otherOptions} ${filter === "all" ? styles.active : ""}`} onClick={() => handleFilterChange("all")}>
                   All
                 </button>
-                <button className={`${styles.otherOptions} ${filter === "food" ? styles.active : ""}`} onClick={() => handleFilterChange("food")}>
+                <button className={`${filter === "food" ? styles.allOptions : styles.otherOptions} ${filter === "food" ? styles.active : ""}`} onClick={() => handleFilterChange("food")}>
                   Food
                 </button>
-                <button className={`${styles.otherOptions} ${filter === "drinks" ? styles.active : ""}`} onClick={() => handleFilterChange("drinks")}>
+                <button className={`${filter === "drinks" ? styles.allOptions : styles.otherOptions} ${filter === "drinks" ? styles.active : ""}`} onClick={() => handleFilterChange("drinks")}>
                   Drinks
                 </button>
             </div>

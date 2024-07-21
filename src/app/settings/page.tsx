@@ -31,6 +31,10 @@ const SettingsPage: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [bio, setBio] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [gmail, setGmail] = useState<string>(() => {
+    return localStorage.getItem("email") || "";
+  });
+
 
   const initialFormState = {
     firstName: "",
@@ -52,6 +56,8 @@ const SettingsPage: React.FC = () => {
     // Save the form inputs - this could involve making an API call to update the user profile
     localStorage.setItem('firstName', firstName);
     localStorage.setItem('lastName', lastName);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
     localStorage.setItem('bio', bio);
     console.log({
       firstName,
@@ -284,7 +290,7 @@ const SettingsPage: React.FC = () => {
                 <div className={styles.editDetails}>
                   <div className={styles.editSecurityDetails}>
                     <p>Sign-in Email</p> 
-                    <p>Jegsboy007@gmail.com</p>
+                    <p>{gmail}</p>
                   </div>
                   <div className={styles.editSecurityDetails}>
                     <p>Password</p> 
