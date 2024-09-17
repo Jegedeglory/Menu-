@@ -34,7 +34,7 @@ export const TopBar = () => {
             <div className={styles.AvatarMenu}>
                 <img src="/images/moon.svg" alt="toggle Theme" />
                 <img src="/images/bell.svg" alt="Notification" />
-                <img src="/images/Moon.svg" alt="Profile Image" className={styles.profilePicture} />
+                <img src="/images/avatar.svg" alt="Profile Image" className={styles.profilePicture} />
             </div>
         </div>
         <div className={styles.topBarWithLogo}>

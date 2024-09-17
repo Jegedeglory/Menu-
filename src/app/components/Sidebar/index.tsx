@@ -44,7 +44,7 @@ export const SideBar = () => {
                     <Link href="/">
                         <span className={styles.Logo}>
                             <div>
-                                <img src="./images//images/Logo.png" alt="Logo" />
+                                <img src="/images/Logo.png" alt="Logo" />
                             </div>
                         </span>
                     </Link>
