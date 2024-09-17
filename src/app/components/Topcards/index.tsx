@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./topcards.module.css";
-import Avatar from "../../images/avatar.png";
+// import Avatar from "../../images/avatar.png";
 
 export const TopCards = () => {
     return (
@@ -18,7 +18,7 @@ export const TopCards = () => {
             <div className={styles.bids}>
                 <div className={styles.bid_Image}></div>
                 <div className={styles.bid_content}>
-                    <div className={styles.bid_postContent}><img src={Avatar.src} alt="Image" /> <p className={styles.ProfileName}>John Abraham</p></div>
+                    <div className={styles.bid_postContent}><img src="/images/avatar.png" alt="Image" /> <p className={styles.ProfileName}>John Abraham</p></div>
                     <div className={styles.AllBids}>
                         <p className={styles.bidder_Name}>Brighten LQ</p>
                         <p className={styles.bidder_time}>Average delivery time</p>

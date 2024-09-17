@@ -81,7 +81,7 @@ const Home: React.FC = () => {
             {filteredChefs.map((chef) => (
               <div className={styles.orderContent} key={chef.id}>
                 <img
-                  src={Heart.src}
+                  src="./images/bytesizeHeart.svg"
                   alt=""
                   className={styles.loveImg}
                   onClick={() => addToFavorites(chef)}

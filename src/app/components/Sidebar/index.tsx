@@ -4,7 +4,7 @@ import styles from "./sidebar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation"; 
 import AuthService from "../../login/authservice";
-import Logo from "../../images/Logo.png";
+// import Logo from "../../images/Logo.png";
 
 type IconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
 
@@ -44,7 +44,7 @@ export const SideBar = () => {
                     <Link href="/">
                         <span className={styles.Logo}>
                             <div>
-                                <img src={Logo.src} alt="Logo" />
+                                <img src="./images//images/Logo.png" alt="Logo" />
                             </div>
                         </span>
                     </Link>

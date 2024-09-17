@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import Love from '../images/ant-design_heart-filled.svg';
+// import Love from '../images/ant-design_heart-filled.svg';
 import { SideBar } from '../components/Sidebar';
 import { TopBar } from '../components/Topbar';
 
@@ -44,9 +44,9 @@ const Favorite: React.FC = () => {
           <div className={styles.placeOrder}>
             {favoriteChefs.map((chef) => (
               <div className={styles.orderContent} key={chef.id}>
-                <img src={Love.src} alt="" className={styles.loveImg} />
+                <img src="/images/ant-design_heart-filled.svg" alt="" className={styles.loveImg} />
                 <Image
-                  src={chef.image}
+                  src={chef.image} 
                   alt="Image"
                   width="243"
                   height="187"

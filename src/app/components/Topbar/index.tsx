@@ -2,16 +2,13 @@
 import React, { useState, useEffect } from "react";
 
 import styles from "./topbar.module.css";
-import Moon from "../../images/Moon.svg";
-import Notification from "../../images/bell.svg";
-import Avatar from "../../images/avatar.png";
+// import Avatar from "@public/images/avatar.png";
 import Link from "next/link";
-import Logo from "../../images/Logo.png"
 
 export const TopBar = () => {
     const [theme, setTheme] = useState("light");
     const [profilePic, setProfilePic] = useState<string>(() => {
-        return localStorage.getItem("profilePic") || Avatar.src;
+        return localStorage.getItem("profilePic") || "/images/avatar.png";
       });
 
 
@@ -35,9 +32,9 @@ export const TopBar = () => {
         <div className={styles.topBar}>
             <input type="text" placeholder="Search here" className={styles.search} />
             <div className={styles.AvatarMenu}>
-                <img src={Moon.src} alt="toggle Theme" onClick={toggleTheme} />
-                <img src={Notification.src} alt="Notification" />
-                <img src={profilePic} alt="Profile Image" className={styles.profilePicture} />
+                <img src="/images/moon.svg" alt="toggle Theme" />
+                <img src="/images/bell.svg" alt="Notification" />
+                <img src="/images/Moon.svg" alt="Profile Image" className={styles.profilePicture} />
             </div>
         </div>
         <div className={styles.topBarWithLogo}>
@@ -46,16 +43,16 @@ export const TopBar = () => {
                          <Link href="/">
                 <span className={`${styles.Logo} ${styles.LogoOutside}`}>
                     <div>
-                        <img src={Logo.src} alt="Logo" />
+                        <img src="/images/Logo.png" alt="Logo" />
                     </div>
                 </span>
             </Link>
             <input type="text" placeholder="Search here" className={styles.search} />
             </span>
             <div className={styles.AvatarMenu}>
-                <img src={Moon.src} alt="toggle Theme" />
-                <img src={Notification.src} alt="Notification" />
-                <img src={profilePic} alt="Profile Image" className={styles.profilePicture} />
+                <img src="./images/moon.svg" alt="toggle Theme" />
+                <img src="./images/bell.svg" alt="Notification" />
+                <img src="/images/avatar.png" alt="Profile Image" className={styles.profilePicture} />
             </div>
         </div>
 

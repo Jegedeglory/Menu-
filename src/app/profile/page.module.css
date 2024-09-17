@@ -33,7 +33,7 @@
   }
   
   .search {
-    background-image: url("../images/Search.svg");
+    background-image: url("/images/Search.svg");
     background-repeat: no-repeat;
     background-position: 10px center;
     padding: 10px;

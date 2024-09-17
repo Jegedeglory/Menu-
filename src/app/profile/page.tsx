@@ -1,9 +1,9 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
-import Avatar from "../images/avatar.png"
+// import Avatar from "../images/avatar.png"
 import Link from "next/link";
-import Heart from "../images/heart.svg"
+// import Heart from "../images/heart.svg"
 import { TopBar } from "../components/Topbar";
 import { SideBar } from "../components/Sidebar";
 
@@ -19,7 +19,7 @@ interface Chef {
 const ProfilePage: React.FC = () => {
   const [favorites, setFavorites] = useState<Chef[]>([]);
   const [profilePic, setProfilePic] = useState<string>(() => {
-    return localStorage.getItem("profilePic") || Avatar.src;
+    return localStorage.getItem("profilePic") || "/images/avatar.png";
   });
 
   const [firstName, setFirstName] = useState<string>(() => {
@@ -98,14 +98,14 @@ const ProfilePage: React.FC = () => {
           <div className={styles.followers_section}>
             <p className={styles.followingWord}>Following</p>
             <div className={styles.followers}>
-                    <img src={ Avatar.src } alt="Profile image" height={50} width={50}/>
+                    <img src="/images/avatar.png" alt="Profile image" height={50} width={50}/>
                 <span className={styles.followers_description}>
                 <p>Glory's pasteries and groceries</p>
                 <p>6.4k</p></span>
                 <button className={styles.unfollowButton}>Unfollow</button>
             </div>
             <div className={styles.followers}>
-                    <img src={ Avatar.src } alt="Profile image" height={50} width={50}/>
+                    <img src="/images/avatar.png" alt="Profile image" height={50} width={50}/>
                 <span className={styles.followers_description}>
                 <p>Glory's pasteries and groceries</p>
                 <p>856</p></span>
@@ -113,14 +113,14 @@ const ProfilePage: React.FC = () => {
             </div>
             <p className={styles.followingWord}>Recommended for you</p>
             <div className={styles.followers}>
-                    <img src={ Avatar.src } alt="Profile image" height={50} width={50}/>
+                    <img src="/images/avatar.png" alt="Profile image" height={50} width={50}/>
                 <span className={styles.followers_description}>
                 <p>Glory's pasteries and groceries</p>
                 </span>
                 <button className={styles.unfollowButton}>Follow</button>
             </div>
             <div className={styles.followers}>
-                    <img src={ Avatar.src } alt="Profile image" height={50} width={50}/>
+                    <img src="/images/avatar.png" alt="Profile image" height={50} width={50}/>
                 <span className={styles.followers_description}>
                 <p>Glory's pasteries and groceries</p>
                 </span>
@@ -133,7 +133,7 @@ const ProfilePage: React.FC = () => {
             {chefs.map((chef) => (
               <div className={styles.OrderContent} key={chef.id}>
                 <img
-                  src={Heart.src}
+                  src="/images/heart.svg"
                   alt=""
                   className={styles.loveImg}
                   onClick={() => addToFavorites(chef)}

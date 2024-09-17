@@ -38,7 +38,7 @@
 
 
 .Explore {
-  background-image: url("../../images/Discover.png");
+  background-image: url("/images/Discover.png");
   width: 595px;
   height: 228px;
   flex: 1;
@@ -108,7 +108,7 @@
   align-items: center;
 
   .bid_Image {
-    background-image: url("../../images/NFT.png");
+    background-image: url("/images/NFT.png");
     width: 100%;
     max-width: 100%;
     display: flex;

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import PfP from "../images/pfp.svg.png";
+// import PfP from "../images/pfp.svg.png";
 import { SideBar } from "../components/Sidebar";
 import { TopBar } from "../components/Topbar";
 import ToggleVisibility from "../components/toggleVisibilty"; 
@@ -23,7 +23,7 @@ const SettingsPage: React.FC = () => {
   const passwordInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [profilePic, setProfilePic] = useState<string>(() => {
-    return localStorage.getItem("profilePic") || PfP.src;
+    return localStorage.getItem("profilePic") || "/images/pfp.png";
   });
 
   const [firstName, setFirstName] = useState<string>("");
