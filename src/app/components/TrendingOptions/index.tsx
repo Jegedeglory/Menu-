@@ -6,9 +6,10 @@ export const TrendingOptions: React.FC = () => {
     <div className={styles.topic_options}>
       <p className={styles.trendingNow}>Trending Now</p>
       <div className={styles.trending_content}>
-        <span className={styles.allOptions}>All</span>
-        <span className={styles.otherOptions}>Food</span>
-        <span className={styles.otherOptions}>Drinks</span>
+        
+        <button className={styles.allOptions}>All</button>
+        <button className={styles.otherOptions}>Food</button>
+        <button className={styles.otherOptions}>Drinks</button>
       </div>
     </div>
   );

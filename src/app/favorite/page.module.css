@@ -1,19 +1,11 @@
 .main {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
   }
   
-  .sidebar {
-    border: 1px solid #ccc;
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    box-sizing: border-box;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-    min-height: 100vh;
-  }
-  
+
   
   .main_content {
     flex: 30;
@@ -22,48 +14,15 @@
     overflow-y: auto;
   }
   
-  .sidebar_Content {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding: 10px;
-  }
-  
-  .Logo {
-    margin-bottom: 20px;
-  }
+
+
   
   .topbarMainContent {
     display: flex;
     width: 100%;
   }
 
-  .topBar {
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-  }
-  
-  .search {
-    background-image: url("../images/Search.svg");
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    padding: 10px;
-    text-align: center; 
-    box-shadow: 0.2px 0.2px 1px rgba(0, 0, 0, 0.3);
-    border: none;
-    border-radius: 10px;
-    width: 250px;
-    height: 40px;
-    color: #68676E;
-    margin-left: 10px;
-  }
-  
-  .AvatarMenu {
-    gap: 20px;
-    display: flex;
-    align-items: center;
-  }
+
   
   .section_content {
     display: flex;
@@ -94,6 +53,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
+
   
     .trendingNow {
       font-weight: 500;
@@ -121,7 +82,6 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 20px;
-  /* padding: 0 20px; */
 
 
   .orderContent {
@@ -132,11 +92,11 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    /* margin: 5px; */
+    margin: 5px;
     border-radius: 10px;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* align-items: center; */
+    align-items: center;
       
   .loveImg{
     display: flex;
@@ -144,16 +104,17 @@
     width: 30px;
     margin-bottom: 10px;
     cursor: pointer;
-    margin-top: auto;
+    margin-right: auto;
   }
 
     .orderContentImage {
       border-radius: 10px;
-      max-height: auto;
-      width: 100%;
+      /* max-height: auto; */
+      width: 243px;
       object-fit: cover;
       background-position: 10px center;
       margin-bottom: 10px;
+      height: 187px;
     }
     
     .sellersName {
@@ -190,3 +151,17 @@
     width: 40px;
     text-align: center;
   }
+
+  
+@media screen and (max-width: 48rem){
+
+  .main_content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+
+.placeOrder {
+  padding-block-end: 50px;
+}
+}

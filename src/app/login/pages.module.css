@@ -33,6 +33,8 @@
     padding: 1rem;
     border: none;
     border-radius: 10px;
+    box-sizing: border-box; 
+    width: 100%;
   }
   
   .button {
@@ -50,4 +52,21 @@
     background: none;
     color: white;
     text-decoration: underline;
+  }
+
+
+  .passwordWrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .togglePass {
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
