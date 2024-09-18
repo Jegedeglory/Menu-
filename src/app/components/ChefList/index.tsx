@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ChefList.module.css';
 import Image from 'next/image';
-import Heart from '../images/bytesizeHeart.svg';
+// import Heart from '../images/bytesizeHeart.svg';
 
 export const ChefList: React.FC<{ chefs: any[], addToFavorites: (chef: any) => void }> = ({ chefs, addToFavorites }) => {
   return (
@@ -9,7 +9,7 @@ export const ChefList: React.FC<{ chefs: any[], addToFavorites: (chef: any) => v
       {chefs.map((chef) => (
         <div className={styles.orderContent} key={chef.id}>
           <img
-            src={Heart.src}
+            src="/images/bytesizeHeart.svg"
             alt=""
             className={styles.loveImg}
             onClick={() => addToFavorites(chef)}

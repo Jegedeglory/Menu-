@@ -6,15 +6,15 @@ import { useRouter } from "next/navigation";
 import AuthService from "../../login/authservice";
 // import Logo from "../../images/Logo.png";
 
-type IconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
+type iconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
 
 export const SideBar = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const [selectedIcon, setSelectedIcon] = useState<IconName | null>(null);
+    const [selectedIcon, setSelectedIcon] = useState<iconName | null>(null);
     const router = useRouter();
 
 
-    const handleIconClick = (icon: IconName) => {
+    const handleIconClick = (icon: iconName) => {
         setSelectedIcon(icon);
 
         if (icon === "sign-out") {
