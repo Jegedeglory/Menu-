@@ -167,6 +167,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    color: #000;
   }
 
   .editProfileInput {
@@ -284,7 +285,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
