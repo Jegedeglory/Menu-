@@ -3,22 +3,36 @@ import styles from './ChefList.module.css';
 import Image from 'next/image';
 // import Heart from '../images/bytesizeHeart.svg';
 
-export const ChefList: React.FC<{ chefs: any[], addToFavorites: (chef: any) => void }> = ({ chefs, addToFavorites }) => {
+interface Chef {
+  id: string | number;
+  image: string;
+  name: string;
+  deliveryTime: string;
+}
+
+interface ChefListProps {
+  chefs: Chef[];
+  addToFavorites: (chef: Chef) => void;
+}
+
+export const ChefList: React.FC<ChefListProps> = ({ chefs, addToFavorites }) => {
   return (
     <div className={styles.placeOrder}>
       {chefs.map((chef) => (
         <div className={styles.orderContent} key={chef.id}>
           <img
-            src="/images/bytesizeHeart.svg"
-            alt=""
+
+            src={Heart.src}
+            alt="Favorite"
+
             className={styles.loveImg}
             onClick={() => addToFavorites(chef)}
           />
           <Image
             src={chef.image}
-            alt="Image"
-            width="100"
-            height="100"
+            alt="Chef Image"
+            width={100}
+            height={100}
             objectFit="cover"
             className={styles.orderContentImage}
           />
