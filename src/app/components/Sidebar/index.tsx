@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import AuthService from '../../login/authservice';
 // import Logo from "../../images/Logo.png";
 
-type IconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
+type iconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
 
 export const SideBar = () => {
   const [isMobile, setIsMobile] = useState(false);
