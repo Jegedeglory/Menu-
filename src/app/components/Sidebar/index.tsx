@@ -136,3 +136,61 @@ export const SideBar = () => {
     </>
   );
 };
+
+
+
+
+
+// "use client";
+
+// import React, { useState } from "react";
+// import styles from "./sidebar.module.css";
+// import Link from "next/link";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHouse, faUser, faBuildingColumns, faFingerprint, faPaperclip, faGears } from "@fortawesome/free-solid-svg-icons";
+
+// export const SideBar = () => {
+//   const [isNavOpen, setIsNavOpen] = useState(false);
+//   const [activeIcon, setActiveIcon] = useState<string>("home");
+
+//   const toggleNav = () => setIsNavOpen(!isNavOpen);
+
+//   const handleIconClick = (icon: string) => {
+//     setActiveIcon(icon);
+//   };
+
+//   const navItems = [
+//     { name: "Home", icon: faHouse, gradient: "linear-gradient(-60deg, #ff5858 0%, #f09819 100%)", href: "/" },
+//     { name: "Perfil", icon: faUser, gradient: "linear-gradient(109.6deg, rgba(204,0,0,1) 11.2%, rgba(68,0,0,1) 100.6%)", href: "/profile" },
+//     { name: "Fiscal", icon: faBuildingColumns, gradient: "linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%)", href: "/" },
+//     { name: "Credenciales", icon: faFingerprint, gradient: "linear-gradient(112.3deg, rgba(252,222,28,1) 23%, rgba(202,178,22,1) 70.2%)", href: "/login" },
+//     { name: "Archivo", icon: faPaperclip, gradient: "linear-gradient(-45deg, #ccff33 0%, #004b23 100%)", href: "/favorite" },
+//     { name: "Configuración", icon: faGears, gradient: "linear-gradient(45deg,#239FE9,#44D5F3)", href: "/settings" },
+//   ];
+
+//   return (
+//     <header>
+//       <nav className={`${styles.nav} ${isNavOpen ? styles.open : ""}`}>
+//         {/* <div className={styles.mainToggle} onClick={toggleNav}></div> */}
+//         <ul className={styles.list}>
+//           {navItems.map((item) => (
+//             <li
+//               key={item.name}
+//               className={`${styles.listIcon} ${activeIcon === item.name.toLowerCase() ? styles.active : ""}`}
+//               style={{ "--color": item.gradient } as React.CSSProperties}
+//               onClick={() => handleIconClick(item.name.toLowerCase())}
+//             >
+//               <Link href={item.href}>
+//                   <span className={styles.icon}>
+//                     <FontAwesomeIcon icon={item.icon} size="xl" />
+//                   </span>
+//                   <span className={styles.text}>{item.name}</span>
+//               </Link>
+//             </li>
+//           ))}
+//         </ul>
+//       </nav>
+//     </header>
+//   );
+// };
+

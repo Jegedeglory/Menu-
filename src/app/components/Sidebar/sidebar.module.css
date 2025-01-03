@@ -62,3 +62,118 @@
 .active {
     fill: #6F4FF2;
   }
+
+
+
+/* 
+
+  @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+
+
+.nav {
+  border-radius: 15px;
+  position: fixed;
+  inset: 20px 0 20px 20px;
+  width: 75px;
+  background: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  box-shadow: 2px 2px #517fa4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.nav.open {
+  width: 250px;
+}
+
+.mainToggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.mainToggle::before,
+.mainToggle::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.mainToggle::before {
+  transform: translateY(-8px);
+}
+
+.mainToggle::after {
+  transform: translateY(8px);
+}
+
+.nav.open .mainToggle::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.nav.open .mainToggle::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.listIcon {
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.listIcon a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  min-width: 55px;
+  height: 55px;
+  line-height: 60px;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.listIcon.active .icon {
+  color: #009efd;
+  background: var(--color);
+}
+
+.text {
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #009efd;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.nav.open .text {
+  opacity: 1;
+  visibility: visible;
+} */
