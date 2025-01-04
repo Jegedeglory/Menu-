@@ -4,7 +4,6 @@ import styles from './sidebar.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import AuthService from '../../login/authservice';
-// import Logo from "../../images/Logo.png";
 
 type iconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
 
