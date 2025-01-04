@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import AuthService from '../../login/authservice';
 
-type IconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
+type iconName = 'home' | 'favorite' | 'settings' | 'profile' | 'sign-out';
 
 export const SideBar = () => {
   const [isMobile, setIsMobile] = useState(false);

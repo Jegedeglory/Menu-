@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ChefList.module.css';
 import Image from 'next/image';
-import Heart from '../images/bytesizeHeart.svg';
+// import Heart from '../images/bytesizeHeart.svg';
 
 interface Chef {
   id: string | number;
@@ -21,8 +21,10 @@ export const ChefList: React.FC<ChefListProps> = ({ chefs, addToFavorites }) => 
       {chefs.map((chef) => (
         <div className={styles.orderContent} key={chef.id}>
           <img
+
             src={Heart.src}
             alt="Favorite"
+
             className={styles.loveImg}
             onClick={() => addToFavorites(chef)}
           />

@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
@@ -18,7 +17,8 @@ interface Chef {
 }
 const Home: React.FC = () => {
   const [favorites, setFavorites] = useState<Chef[]>([]);
-  const [filter, setFilter] = useState<string>("all" || "drinks" || "food");
+  const [filter, setFilter] = useState<string>("all");
+  
   const chefs = [
     { id: 1, name: 'James Grey Winery', deliveryTime: '25 min', image: 'https://images.pexels.com/photos/33265/wine-bottle-wine-glasses-wine-ambience.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', description: 'Chef 1 description', productType: "drinks" },
     { id: 2, name: 'Fruit Juice Palace', deliveryTime: '35 min', image: 'https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg', description: 'Chef 2 description', productType: "drinks" },
