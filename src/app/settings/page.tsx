@@ -236,22 +236,7 @@ const SettingsPage: React.FC = () => {
                     <p>Alert me when my delivery is complete</p>
                   </div>
                 </div>
-                <div className={styles.checkboxInput}>
-                  <label className={styles.switch}>
-                    <input type="checkbox" />
-                    <span className={styles.slider}></span>
-                  </label>
-                  <label className={styles.switch}>
-                    <input type="checkbox" />
-                    <span className={styles.sliderRound}></span>
-                  </label>
-                  <div className={styles.checkboxArea}>
-                    <p className={styles.notificationBlockWord}>Delivery completed </p>
-
-                    <p>Alert me when my delivery is complete</p>
-                  </div>
-                </div>
-                <div className={styles.checkboxInput}>
+                {/* <div className={styles.checkboxInput}>
                   <label className={styles.switch}>
                     <input type="checkbox" />
                     <span className={styles.slider}></span>
@@ -264,7 +249,7 @@ const SettingsPage: React.FC = () => {
                     <p className={styles.notificationBlockWord}>Delivery completed</p>
                     <p>Alert me when my delivery is complete</p>
                   </div>
-                </div>
+                </div> */}
                 <div className={styles.saveChangesButton}>
                   <button className={styles.cancelChanges}>Cancel</button>
                   <button className={styles.save}>Save</button>
